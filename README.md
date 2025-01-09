@@ -24,10 +24,10 @@ million vertices, while every known approach fails. Analysis also reveals that t
 This project contains a dataset folder which contains the datasets and the link to datasets used in the paper.
 
 
-#Prerequisites
+# Prerequisites
 The codes are implemented under Ubuntu 22.04. Boost C++ 17 is also required for running the codes.
 
-#Build and Run
+# Build and Run
 In Linux/Ubuntu operating system, execute the following command to build the program.
 ```
 make
