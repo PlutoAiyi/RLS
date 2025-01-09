@@ -1,7 +1,7 @@
 # Datasets Links
 
 
-SET-1 instances: https://ordii.unibs.it/index.php?page=gisp
+SET-1 instances: https://or-dii.unibs.it/instances/Instances_GISP.zip
 
 SET-2 instances: https://github.com/m2-Zheng/GISP/tree/main/large%20instance
 
