@@ -4,7 +4,7 @@ CXX = g++
 
 CXXFLAGS = -O3 -g
 
-TARGET = mis 
+TARGET = RLS 
 
 SRC = main.cpp Graph.cpp Utility.cpp RandList.hpp
 

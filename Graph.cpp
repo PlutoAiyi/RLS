@@ -41,14 +41,11 @@ void Graph::read_graph_GIS() {
     char line[1024];
     char first_char;
     do {
-        // Read first character to check if it's a comment
         if (fscanf(f, "%c", &first_char) != 1) break;
         
         if (first_char == 'c') {
-            // If it's a comment, read until end of line
-            fgets(line, sizeof(line), f);
+            char* tmp=fgets(line, sizeof(line), f);
         } else {
-            // If it's not a comment, move file pointer back one character
             fseek(f, -1, SEEK_CUR);
             break;
         }
