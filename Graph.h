@@ -23,7 +23,6 @@ public:
 	ui test;
 	vector<int> weight_node;
 	//dyamic_weight=weight_node+ sum max(0,-p(v,x))
-	//即只对负惩罚项起效果
 	vector<int> dynamic_weight;
 	vector<ui> d0;
 	vector<ui> Cand_reduce;
@@ -32,7 +31,6 @@ public:
 	// ui *weight_edge;
 	// ui *pstart; //offset of neighbors of nodes
 	// ui *edges; //adjacent ids of edges
-	//first是点，second是权
 	vector<list<ui>> adj;
 	vector<list<pair<ui,int>>> generalized_adj;
 	// vector<list<pair<ui,int>>> virtual_adj;
@@ -49,8 +47,6 @@ public:
 	vector<Myturple> exclusive_pairs;
 	RandList S;
 	RandList temp_NP;
-	//edges存的是边的编号（以某种顺序）
-	//pstart存的是顶点i在edges中的起始索引（索引从pstart[i]到pstart[i+1]-1均为顶点i的边）
 	// ui *is_generalized_edges;
 	// ui *generalized_pstart; 
 	// ui *generalized_edges; 
@@ -58,16 +54,8 @@ public:
 	Graph(const char *_dir) ;
 	~Graph() ;
 	Graph();
-	void read_graph() ;
 	void read_graph_GIS() ;
-	void read_graph_GIS2() ;
-	void degree_one_kernal_and_remove_max_degree() ;
-	void degree_two_kernal_and_remove_max_degree_with_contraction() ;
-	void degree_two_kernal_and_remove_max_degree_without_contraction() ;
-	void degree_two_kernal_dominate_lp_and_remove_max_degree_without_contraction() ;
 	void GIS() ;
-	void greedy() ;
-	void greedy_dynamic() ;
 
 private:
 	void reduction_penalty(char* is,int& res,bool init);
@@ -113,9 +101,6 @@ private:
 	int get_add_utility(ui u);
 	int get_swap_utility(ui u,ui v,vector<int>& utility);
 	void update_swap_target(RandList& swap_set,vector<ui>& swap_target);
-	void reduction_15(char* is,int& res);
-	bool reduction_16(char* is,int& res);
-	bool is_child(char* is,ui u,bool& equal);
 	void delete4fold(ui u,int& res,char* is);
 	void Drop_Set(int pos,int& res,int current,priority_queue<pair<ui,ui>,vector<pair<ui,ui>>,greater<pair<ui,ui>>>& tabu,vector<ui>& is_tabu,RandList& add_set,RandList& swap_set,vector<ui>& swap_target, vector<int>& utility, vector<ui>& hard_degree_in_S, bool& can_drop,char* is);
 	int Swap_Set(int pos,int& res,int current,priority_queue<pair<ui,ui>,vector<pair<ui,ui>>,greater<pair<ui,ui>>>& tabu,vector<ui>& is_tabu,RandList& swap_set,vector<ui>& swap_target,RandList& add_set, vector<int>& utility, vector<ui>& hard_degree_in_S,char* is,int best_res);
@@ -141,29 +126,12 @@ private:
 	void add_vertex(ui u,int& res,char* is);
 	void add_vertex4fold(ui u,int& res,char* is);
 	void delete_vertex(ui u,int& res,char* is);
-	void emerge_vertices(ui u,ui x,ui y, int& res,char* is);
-	void emerge_vertices(ui x,ui y, int& res,char* is);
 	void add_edge(ui v,ui u);
 	void remove_edge(ui v,ui u);
 	void add_soft_edge(ui v,ui u,int weight);
 	void remove_soft_edge(ui v,ui u,int weight);
-	void add_virtual_edge(ui v,ui u);
-	void remove_virtual_edge(ui v,ui u,int weight);
 	void soft2hard(char* is,int& res);
-	int lp_reduction(ui *ids, ui ids_n, char *is, int *degree) ;
 
-	void shrink(ui u, ui &end, const char *is) ;
-	void shrink(ui u, ui &end, const char *is, ui *tri) ;
-	void update_triangle(ui u1, ui u2, ui *pend, char *is, char *adj, ui *tri, int *degree, char *dominate, vector<ui> &dominated) ;
-	int dominated_check(ui u, ui *pend, char *is, ui *tri, int *degree) ;
-	int compute_triangle_counts(ui *tri, ui *pend, char *adj, char *is, int *degree, char *dominate, vector<ui> &dominated) ;
-	void construct_degree_increase(ui *ids) ;
-
-	int delete_vertex(ui v, char *is, int *degree, vector<ui> &degree_ones) ;
-	int delete_vertex(ui v, char *is, int *degree, vector<ui> &degree_ones, vector<ui> &degree_twos) ;
-	int delete_vertex(ui v, const ui *pend, char *is, int *degree, vector<ui> &degree_ones, vector<ui> &degree_twos) ;
-	int delete_vertex(ui u, ui *pend, char *is, vector<ui> &degree_twos, ui *tri, char *adj, int *degree, char *dominate, vector<ui> &dominated) ;
-	int delete_vertex(ui v, char *is, int *degree, int *head, Edge *es, int *bin_head, int *bin_next, int *bin_pre, vector<ui> &degree_ones, vector<ui> &degree_twos) ;
 };
 
 #endif
