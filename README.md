@@ -6,7 +6,11 @@ We study the \textit{generalized independent set} (GIS) problem.
 In an undirected graph $G=(V,E)$, where $V$ is the vertex set and $E$ is the edge set, each vertex $v\in V$ is assigned a profit $w(v)\in \mathbb{R}$ and each edge $e\in E$ is either a \textit{permanent edge} or a \textit{removable edge}. 
 If $e$ is a removable edge, then it is further associated with a penalty $p(e)\in \mathbb{R}$. 
 The GIS problem asks for a subset $I\subseteq V$ that contains no permanent edges with both endpoints in $I$, and maximizes the difference between the sum of vertex profits in $I$ and the sum of penalties of removable edges with both endpoints in $I$. An example is shown in the following figure.
-![alt text](https://github.com/PlutoAiyi/RLS/blob/main/GIS%20example.png?raw=true)
+
+<p align="center">
+  <img src="[http://some_place.com/image.png](https://github.com/PlutoAiyi/RLS/blob/main/GIS%20example.png?raw=true)" />
+</p>
+
 
 The set of red vertices is a solution with a net benefit of $2-1+6+5=12$.
 
