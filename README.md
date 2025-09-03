@@ -38,3 +38,7 @@ To run the executable file, call the following command.
 ./RLS datasets/[dataset name.txt]
 ```
 Be sure to clean all the dependencies and executable files before building a different version of the code.
+
+
+# Note
+The GIS.mod file is used for CPLEX v22.11 to exactly solve the instances.
