@@ -44,8 +44,11 @@ Be sure to clean all the dependencies and executable files before building a dif
 The GIS.mod file is used for CPLEX v22.12 to exactly solve the instances.
 We also provide the link for benchmark algorithms:
 
-•	CB&B:The exact branch-and-bound algorithm using the UBQP formulation proposed by Hosseinian and Butenko (2019). The source code was implemented in C++ and made available by the authors. We share the source code in https://drive.google.com/file/d/1h7WCpe3mz-WKQftBW8l3EipsIhjpJRPB/view?usp=sharing
-•	LA-B&B: The exact branch-and-bound algorithm using a Lagrange relaxation technique by Zheng et al. (2024). The source code is implemented in JAVA and made public in https://github.com/m2-Zheng/GISP.
-•	ILS-VND: The iterative local search algorithm proposed by Nogueira et al. (2021). https://sites.google.com/site/nogueirabruno/software
-•	ALS: The adaptive multi-neighborhood local search algorithm proposed by Zheng et al. (2024). The source code is implemented in JAVA and made public in https://github.com/m2-Zheng/GISP.
+**CB&B**:The exact branch-and-bound algorithm using the UBQP formulation proposed by Hosseinian and Butenko (2019). The source code was implemented in C++ and made available by the authors. We share the source code in https://drive.google.com/file/d/1h7WCpe3mz-WKQftBW8l3EipsIhjpJRPB/view?usp=sharing
+
+**LA-B&B**: The exact branch-and-bound algorithm using a Lagrange relaxation technique by Zheng et al. (2024). The source code is implemented in JAVA and made public in https://github.com/m2-Zheng/GISP.
+
+**ILS-VND**: The iterative local search algorithm proposed by Nogueira et al. (2021). https://sites.google.com/site/nogueirabruno/software
+
+**ALS**: The adaptive multi-neighborhood local search algorithm proposed by Zheng et al. (2024). The source code is implemented in JAVA and made public in https://github.com/m2-Zheng/GISP.
 
