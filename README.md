@@ -52,3 +52,7 @@ We also provide the link for benchmark algorithms:
 
 **ALS**: The adaptive multi-neighborhood local search algorithm proposed by Zheng et al. (2024). The source code is implemented in JAVA and made public in https://github.com/m2-Zheng/GISP.
 
+# Detailed Comparative Results on Set-1 Instances
+<p align="center">
+  <img src="https://github.com/PlutoAiyi/RLS/blob/main/Detailed%20Comparative%20Results%20on%20SET1%20Instances.pdf?raw=true"  alt="Sublime's custom image" />
+</p>
