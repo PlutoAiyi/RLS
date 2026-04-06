@@ -54,5 +54,7 @@ We also provide the link for benchmark algorithms:
 
 # Detailed Comparative Results on Set-1 Instances
 <p align="center">
-  <img src="https://github.com/PlutoAiyi/RLS/blob/main/Detailed%20Comparative%20Results%20on%20SET1%20Instances.pdf?raw=true"  alt="Sublime's custom image" />
+  <img src="https://github.com/PlutoAiyi/RLS/blob/main/Experiments%20on%20216%20Instances/table1_1.png?raw=true"  alt="Sublime's custom image" />
+  <img src="https://github.com/PlutoAiyi/RLS/blob/main/Experiments%20on%20216%20Instances/table1_2.png?raw=true"  alt="Sublime's custom image" />
+  <img src="https://github.com/PlutoAiyi/RLS/blob/main/Experiments%20on%20216%20Instances/table1_3.png?raw=true"  alt="Sublime's custom image" />
 </p>
